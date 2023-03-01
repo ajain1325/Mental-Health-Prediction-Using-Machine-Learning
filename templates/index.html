@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mental Health Predictor</title>
+
+  <!-- CSS Stylesheets and Favicon-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  <link rel="icon" href="static/css/images/favicon-16x16.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons and Javascript -->
+  <script src="https://kit.fontawesome.com/43124feaf5.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <section id="title-section">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img class="title-logo" src="static/css/images/Mental-Health-Logo.png" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#How-it-works">How it works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Algorithms">Algorithms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Counselling">Counselling</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Feedback">Feedback</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer-section">Contact Us</a>
+            </li>
+          </ul>
+          <form class="d-flex title-search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="row title-row">
+      <div class="col-lg-4">
+        <h1 class="title-heading">Mental Health for a better future...</h1>
+        <div class="d-grid col-8">
+          <a class="btn btn-lg btn-primary title-button" href="{{url_for('show_form')}}" role="button">Get Started</a>
+        </div>
+
+      </div>
+      <div class="col-lg-8">
+        <img class="title-image" src="static/css/images/Mental_Health_GIF.gif" />
+      </div>
+    </div>
+  </section>
+  <section id="How-it-works">
+    <div class="container-fluid">
+      <h2>How our Mental Health Predictor works</h2>
+      <img class="HIW-image"src="static/css/images/Website-Flowchart.png"/>
+      <p>Mental health is vital at each point in life, from childhood to adulthood. Numerous factors contribute to mental health issues that lead to mental illness like stress, social anxiety, depression, etc. The onset of mental illness should be determined without flaws for maintaining an appropriate life balance. The increased data size without proper management and analysis is compounding the issue. Therefore, an ML model that determines a person’s mental health with higher accuracy can be highly beneficial to the medical field.</p>
+      <br />
+      <p>We begin by uploading an existing dataset. Then, the dataset is subjected to data cleaning, where incomplete, or missing data will be modified, replaced, or eliminated based on necessity. The next phase is data encoding where categorial data will be converted into integer form for the convenience of our model and more accurate predictions. And then, we’ll find the covariance matrix. Most of the methods for preprocessing or predictive analysis depend on the covariance. The next step is feature scaling which helps us to handle highly varying units. Then, we perform the tuning process to enhance the model’s performance. The model is then evaluated using different machine learning algorithms like Logistic Regression, Naive Bayes, Decision Tree, etc. After that, we will calculate the accuracy of different models. The accuracy of any classifying algorithm will depend upon how well the algorithm will classify the data set which is being tested. The accuracy is measured by using the area under the Receiver Operating Curve. Based on the accuracy value, the most accurate algorithm is determined.
+      </p>
+    </div>
+  </section>
+  <section id="Algorithms">
+    <h2>Algorithms Tested</h2>
+    <p class="award-content">There are now numerous Machine Learning algorithms available, some of which can even assist computers in playing chess, performing surgeries. They are becoming smarter and more personal. With training data, machine learning algorithms are trained. When new data arrives, they can make accurate predictions and decisions based on previous data. In such volatile times, scientists have created a plethora of machine learning algorithms to aid in the resolution of real-world complex problems. We'll now look at some algorithms that have been tested during our "evaluation model" phase.</p>
+    <div class="accordion" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Logistic Regression
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Logistic regression is a classification algorithm that uses supervised learning to predict the likelihood of a target variable. Because the nature of the target or dependent variable is dichotomous, there are only two possible classes. Simply put, the dependent variable is binary in nature, with data coded as either 1 (for success/yes) or 0 (for failure/no). A logistic regression model predicts P(Y=1) as a function of X mathematically. It is one of the most basic ML algorithms and can be used to solve a variety of classification problems such as spam detection, diabetes prediction, cancer detection, and so on.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            AdaBoost Classifier
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">AdaBoost is a method for iterative ensemble construction. The AdaBoost classifier creates a strong classifier by combining multiple low-performing classifiers, resulting in a high-accuracy strong classifier. It combines multiple classifiers to improve classifier accuracy. Adaboost's basic concept is to set the weights of classifiers and train the data sample in each iteration to ensure accurate predictions of unusual observations. Any machine learning algorithm that accepts weights on the training set can be used as the base classifier.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Decision Tree Classifier
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">The Decision Tree algorithm in machine learning is one of the most widely used algorithms today. It is a supervised learning algorithm used for problem classification. It is effective for categorising both categorical and continuous dependent variables. Based on the most significant attributes/independent variables, this algorithm divides the population into two or more homogeneous sets. It is a tree-structured classifier in which internal nodes represent dataset features, branches represent decision rules, and each leaf node represents the result.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+            KNN Classifier
+          </button>
+        </h2>
+        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">The K-nearest neighbours (KNN) algorithm is a type of supervised machine learning (ML) algorithm that can be used for both classification and regression predictive problems. However, it is primarily used in industry for classification and prediction problems. This algorithm predicts the values of new data points based on 'feature similarity,' which means that the new data point will be assigned a value based on how closely it matches the points in the training set. This algorithm is computationally expensive. While using the KNN algorithm, the variables should be normalized, or else higher range variables can bias the algorithm.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseThree">
+            Random Forest Classifier
+          </button>
+        </h2>
+        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFivee" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Random forest is a Supervised Machine Learning Algorithm that is used widely in Classification and Regression problems. It builds decision trees on different samples and takes their majority vote for classification and average in case of regression. One of the most important features of the Random Forest Algorithm is that it can handle the data set containing continuous variables as in the case of regression and categorical variables as in the case of classification. It performs better results for classification problems.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseThree">
+            Gradient Boosting Classifier
+          </button>
+        </h2>
+        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Gradient Boosting is a functional gradient algorithm that repeatedly selects a function that leads in the direction of a weak hypothesis or negative gradient so that it can minimize a loss function. Gradient boosting classifier combines several weak learning models to produce a powerful predicting model.Gradient Boosting consists of three essential parts which are Loss Function, Weak Learner, and Additive Model.
+          Loss Function: The loss function's purpose is to calculate how well the model predicts, given the available data. Depending on the particular issue at hand, this may change.
+          Weak Learner: A weak learner classifies the data, but it makes a lot of mistakes in doing so. Usually, these are decision trees.
+          Additive Model: This is how the trees are added incrementally, iteratively, and sequentially. You should be getting closer to your final model with each iteration.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingSeven">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseThree">
+            XGB Classifier
+          </button>
+        </h2>
+        <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">XGBoost is a distributed gradient boosting library that has been optimised for efficient and scalable training of machine learning models. It's an ensemble learning method that combines the predictions of several weak models to produce a more accurate prediction. Because of its ability to handle large datasets and achieve state-of-the-art performance in many machine learning tasks such as classification and regression, XGBoost has become one of the most popular and widely used machine learning algorithms.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="Feedback">
+    <h2 class="services-section-title">Feedback from our customers</h2>
+    <img class="feedback-img"src="static/css/images/Feedback.png"/>
+  </section>
+  <section id="Counselling">
+    <h2 class="test-drive-section-title">Book a counselling session now!</h2>
+    <form class="row needs-validation" novalidate>
+      <div class="row test-drive-row">
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">First name</label>
+          <input type="text" class="form-control" id="validationCustom01" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="validationCustom02">
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom03" class="form-label">Phone Number</label>
+          <input type="number" class="form-control" id="validationCustom03">
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+      </div>
+      <div class="row test-drive-row">
+        <div class="col-md-6">
+          <label for="validationCustom04" class="form-label">Address</label>
+          <input type="text" class="form-control" id="validationCustom04" required>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom06" class="form-label">Pincode</label>
+          <input type="number" class="form-control" id="validationCustom06">
+          <div class="invalid-feedback">
+            Please provide a valid Pincode.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Mail Address</label>
+          <input type="email" class="form-control" id="validationCustom05" required>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="test-drive-check-box form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Book Now</button>
+      </div>
+    </form>
+  </section>
+  <footer id="footer-section">
+    <div>
+      <i class="fa-brands fa-facebook footer-icon"></i>
+      <i class="fa-brands fa-instagram footer-icon"></i>
+      <i class="fa-brands fa-twitter footer-icon"></i>
+      <i class="fa-brands fa-youtube footer-icon"></i>
+      <i class="fa-brands fa-linkedin footer-icon"></i>
+      <p>© Copyrights Mental Health Predictor 2022</p>
+    </div>
+  </footer>
+</body>
+
+</html>

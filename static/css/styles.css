@@ -1,0 +1,197 @@
+/* Title Section */
+
+#title-section {
+  background-size: cover;
+  padding: 2.5% 8% 10%;
+  background-color: #022031;
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.title-logo {
+  width: 350px;
+  height: 130px;
+}
+
+.title-image {
+  width: 100%;
+}
+
+.title-button {
+  margin: 5% 0 0 11%;
+}
+
+.title-search {
+  margin-right: 2%;
+}
+
+.title-row {
+  margin-top: 2%;
+}
+
+.title-heading {
+  margin-top: 40px;
+  margin-left: 20px;
+  padding: 10px 10px 0;
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+/* Feature Section */
+
+#How-it-works {
+  padding: 10% 10%;
+  text-align: center;
+  line-height: 1.7;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.HIW-image {
+  width: 70%;
+}
+
+.feature-icon:hover {
+  color: #0d6efd;
+}
+
+.feature-box {
+  padding: 3% 4%;
+}
+
+.feature-title {
+  padding: 5px;
+}
+
+/* Models-Section */
+
+#models-section {
+  background-color: #022031;
+  color: #fff;
+  padding: 5% 12%;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.model-heading {
+  margin-bottom: 5%;
+}
+
+.model-card {
+  padding: 10px;
+}
+/* Awards Section */
+
+#Algorithms {
+  background-color: #022031;
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  padding: 5% 12%;
+}
+
+.award-content {
+  padding: 2%;
+}
+
+.accordion-button {
+  background-color: #022031;
+  color: #fff;
+}
+
+.accordion-body {
+  color: #022031;
+}
+
+
+/* Services Section */
+
+#Feedback {
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 5% 12%;
+  text-align: center;
+  background: #fff;
+  color: #022031;
+}
+
+.services-section-title {
+  padding: 5%;
+}
+
+.carousel-caption {
+  font-weight: 700;
+}
+
+.carousel-image {
+  opacity: 0.4;
+}
+
+.carousel-control-color {
+  color: #022031;
+}
+
+.carousel-control-next {
+  color: #022031;
+}
+
+.feedback-img {
+  width: 85%;
+  height: 500px;
+}
+/* Test-drive Section */
+#Counselling {
+  background-color: #022031;
+  color: #fff;
+  padding: 5% 10%;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.test-drive-section-title {
+  text-align: center;
+  margin-bottom: 4%;
+}
+
+.test-drive-row {
+  padding: 1%;
+}
+
+.test-drive-check-box {
+  margin: 2% 0;
+}
+
+/* Footer Section */
+
+#footer-section {
+  background-color: #fff;
+  color: #022031;
+  padding: 7% 5%;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.footer-icon {
+  padding: 0.7%;
+}
+
+/* Media Queries */
+
+@media (max-width: 992px) {
+   .title-image {
+     margin: 0 auto;
+   }
+
+   #models-section {
+     padding: 7% 12%;
+   }
+
+   #awards-section {
+     padding: 8% 12%;
+   }
+
+   #services-section {
+     padding: 8% 12%;
+   }
+}
